@@ -19,21 +19,3 @@ The metadata provides valuable insights that will guide the preprocessing and mo
 
 Scaling: Numerical features such as duration, credit_amount, and age will need to be scaled using a method like StandardScaler (to have a mean of 0 and standard deviation of 1). Cost Matrix: The cost matrix suggests that misclassifying a bad credit risk as good is more costly. This should be considered when tuning the model's parameters and during evaluation (e.g., using a weighted loss function or adjusting class weights). Feature Types: Based on the feature types (categorical and numerical), we can decide on the appropriate preprocessing steps: Categorical: One-hot encoding, label encoding, or ordinal encoding. Numerical: Scaling or normalization.
 
-Models and Approach
-
-Models Implemented
-
-Logistic Regression (Finalized Model)
-Random Forest
-XGBoost
-Optimization Technique
-
-Bayesian Optimization was employed to fine-tune hyperparameters, ensuring efficient exploration of the search space while balancing performance and computational cost.
-
-Future Work
-
-Model Enhancements: o Explore ensemble approaches combining Logistic Regression with Random Forest or XGBoost. o Experiment with advanced boosting methods for potential performance gains.
-Feature Engineering: o Create interaction terms or test alternate encodings to capture more complex relationships. o Perform feature selection to further refine the model.
-Handle Class Imbalance: o Apply SMOTE or adjust class weights to better address minority class (defaults).
-Cross-validation: o Use extensive cross-validation to validate robustness and guard against overfitting.
-Summary This project demonstrates the application of machine learning to predict loan defaults using the German Credit Dataset. By evaluating multiple models and leveraging Bayesian Optimization, Logistic Regression was identified as the optimal solution. The final model balances performance and interpretability, making it well-suited for deployment in the financial sector.
